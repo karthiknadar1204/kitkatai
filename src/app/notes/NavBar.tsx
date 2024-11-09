@@ -12,6 +12,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import darkLogo from '@/assets/dark_logo.jpeg'
 
 export default function NavBar() {
   const { theme } = useTheme();
@@ -22,9 +23,11 @@ export default function NavBar() {
     <>
       <div className="p-4 shadow">
         <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
-          <Link href="/notes" className="flex items-center gap-1">
-            <Image src={logo} alt="FlowBrain logo" width={40} height={40} />
-            <span className="font-bold">FlowBrain</span>
+          <Link href="/notes" className="flex items-center gap-2">
+            <Image src={darkLogo} alt="StickynotesAI logo" width={40} height={40} />
+            <span className="font-bold text-2xl tracking-wide text-white font-serif hover:scale-105 transition-transform">
+              StickynotesAI
+            </span>
           </Link>
           <div className="flex items-center gap-2">
             <UserButton
