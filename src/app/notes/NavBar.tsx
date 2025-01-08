@@ -1,6 +1,5 @@
 "use client";
 
-import logo from "@/assets/logo.png";
 import AIChatButton from "@/components/AIChatButton";
 import AddEditNoteDialog from "@/components/AddEditNoteDialog";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
@@ -25,7 +24,7 @@ export default function NavBar() {
         <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
           <Link href="/notes" className="flex items-center gap-2">
             <Image src={darkLogo} alt="StickynotesAI logo" width={40} height={40} />
-            <span className="font-bold text-2xl tracking-wide text-white font-serif hover:scale-105 transition-transform">
+            <span className="font-bold text-2xl tracking-wide font-serif hover:scale-105 transition-transform text-foreground">
               StickynotesAI
             </span>
           </Link>
