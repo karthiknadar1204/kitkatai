@@ -1,5 +1,11 @@
-# Use Node.js 18 Alpine as base image
-FROM node:18-alpine
+# Use Node.js 18 Debian as base image (better for Prisma)
+FROM node:18-slim
+
+# Install OpenSSL and other dependencies needed for Prisma
+RUN apt-get update && apt-get install -y \
+    openssl \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
